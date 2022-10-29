@@ -1,8 +1,31 @@
 <!-- The routed views render in the <router-outlet>-->
+  <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light  sticky-top" style="position:fixed;z-index: 99; background-color: lightcyan !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['']">Ethoprotectio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" aria-current="page" [routerLink]="['']">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['prestations']"  [class.disabled]="true">Prestations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['connaitre']" [class.disabled]="true">Nous connaitre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['contact']" >Contact</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet [ngStyle]="{'background-color':'green'}" ></router-outlet>
 
 
-<div class="container" >
 
-  <router-outlet></router-outlet>
-
-</div>

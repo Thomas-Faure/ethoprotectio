@@ -1,2 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+#comingsoonimg {
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.commingsoonTitle{
+    font-family: 'Agency FB', arial;
+    font-size: 80px;
+}
+
+.commingsoonText{
+    font-family: 'Calibri Light', arial;
+    font-size: 20px;
+}
+
+.nav-bar-menu-text{
+    font-family: 'Agency FB', arial;
+    font-size: 30px;
+}
+
+
+
+
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./assets/image1.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("./assets/image2.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#comingsoon {
+
+    height: 100%;
+    padding-top: 10%;
+    color: Black
+}

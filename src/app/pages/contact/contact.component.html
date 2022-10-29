@@ -1,0 +1,37 @@
+<div class="col d-flex justify-content-center">
+    <div class="card" style="width:50%;margin-top: 10%;">
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label  class="form-label" for="nomPrenom">Nom et prénom</label>
+                    
+                    <input type="text" class="form-control" id="nomPrenom" [(ngModel)]="model.nomPrenom" name="nomPrenom" >
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Société</label>
+                    <input type="text" class="form-control" id="societe" [(ngModel)]="model.societe" name="societe">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <input type="email" class="form-control"  id="email" [(ngModel)]="model.email" name="email" ngModel email>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Numéro de téléphone</label>
+                    <input type="number" class="form-control" id="numeroTel" [(ngModel)]="model.numeroTel" name="numeroTel">
+                </div>
+
+                <div class="container">
+                    <div class="col-md-12 text-center">
+                        <div *ngIf="canSendMail == true">
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                        <a [href]="'mailto:' + mailtovalue">MESSAGE</a>
+                        </div>
+                        <div *ngIf="canSendMail == false">
+                            <button type="submit" class="btn btn-secondary" disabled>Envoyer</button>
+                            </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
