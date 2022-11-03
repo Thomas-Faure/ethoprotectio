@@ -2,32 +2,20 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
+:root {
+    --main-color-blue: #A6D3F2;
+    --main-color-grey: #969B9F;
+    --main-color-blue2: #919EB1;
+    --main-color-red: #9E3134;
+    --main-color-orange: #BE8C6B;
+    --main-police-title: 'Copperplate Gothic Light', arial;
+    --main-police-text: 'Bahnschrift Light', arial;
+  }
 
-#comingsoonimg {
+/*
+NAV BAR
 
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-}
-
-.commingsoonTitle{
-    font-family: 'Agency FB', arial;
-    font-size: 80px;
-}
-
-.commingsoonText{
-    font-family: 'Calibri Light', arial;
-    font-size: 20px;
-}
-
-.nav-bar-menu-text{
-    font-family: 'Agency FB', arial;
-    font-size: 30px;
-}
-
-
+*/
 
 
 a:hover {
@@ -35,12 +23,71 @@ a:hover {
     text-decoration: underline;
 }
 
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: black;
+}
+.navbar-logo-centered .navbar-nav .nav-link{
+    padding: .5em 1em;
+}
+/**
+COMING SOON
+**/
+
+#comingsoon {
+    color: Black
+}
+.btn-comingsoon{
+    color:white;
+    font-size: 25px;
+    padding: 5px 10px 5px 10px;
+ 
+    font-family: var(--main-police-title);
+    background-color: var(--main-color-red);
+}
+
+.required:after {
+    content:" *";
+    color: red;
+  }
+
+
+#comingsoonimg {
+ 
+    background: url("./assets/image1.jpg") no-repeat center center fixed #000; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.commingsoonTitle{
+    font-family: var(--main-police-title);
+    font-size: 100px;
+}
+
+.commingsoonText{
+    font-family: var(--main-police-text);
+    font-size: 20px;
+}
+
+.nav-bar-menu-text{
+    font-family:  var(--main-police-title);
+    font-size: 30px !important;
+}
+
+
+
 .parallax {
     /* The image used */
     background-image: url("./assets/image1.jpg");
 
     /* Set a specific height */
-    min-height: 500px;
+    min-height: 800px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -64,9 +111,52 @@ a:hover {
 }
 
 
-#comingsoon {
+/** CONTACT FORM*/
 
-    height: 100%;
-    padding-top: 10%;
-    color: Black
+.contact-title1{
+    font-family: var(--main-police-title);
+    font-size: 40px;
+    margin:0;
+    font-weight: bold;
 }
+
+.contact-title2{
+    font-family: var(--main-police-text);
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.contact-title3{
+    font-family: var(--main-police-text);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contact-text{
+    color:black;
+    margin:0;
+    font-family: var(--main-police-text);
+    font-weight: bold;
+}
+
+.contact-box{
+    border-color:black !important;
+    border-width: 2px;
+}
+
+.contact-alert{
+    height: 40px;
+}
+.btn-contact{
+    color:white;
+    font-size: 25px;
+    padding: 5px 10px 5px 10px;
+ 
+    font-family: var(--main-police-title);
+    background-color: var(--main-color-red);
+}
+
+#toast-container > div {
+    opacity:1;
+}
+

@@ -1,31 +1,54 @@
 <!-- The routed views render in the <router-outlet>-->
-  <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light  sticky-top" style="position:fixed;z-index: 99; background-color: lightcyan !important;">
+  <div  class="text-center container-fluid">
+
+  <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light" id="navbar" style="background-color: transparent !important;">
     <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="['']">Ethoprotectio</a>
+      <img src = "./assets/logo.svg" alt="My Happy SVG" height="120"/>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" aria-current="page" [routerLink]="['']">Accueil</a>
+            <a class="nav-link nav-bar-menu-text" aria-current="page" [routerLink]="['/comingsoon']" >Accueil</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/prestations']"  [class.disabled]="true">Prestations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['prestations']"  [class.disabled]="true">Prestations</a>
-          </li>
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/connaitre']" [class.disabled]="true">Nous connaitre</a>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['connaitre']" [class.disabled]="true">Nous connaitre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['contact']" >Contact</a>
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/contact']" >Contact</a>
           </li>
          
         </ul>
       </div>
     </div>
   </nav>
+  
+  <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent;">
+    <a class="navbar-brand d-lg-none" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/comingsoon']" >Accueil</a>
+          </li>     
+            <a class="d-none d-lg-block" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png"></a>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-menu-text" [routerLink]="['/contact']" >Contact</a>
+            </li>  
+        </ul>
+    </div>
+</nav> -->
+  <ul class="nav justify-content-center"></ul>
 
-  <router-outlet [ngStyle]="{'background-color':'green'}" ></router-outlet>
+  <router-outlet ></router-outlet>
 
+
+  </div> 
 
 

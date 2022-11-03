@@ -15,10 +15,10 @@ export class ComingSoonComponent implements OnInit {
   imageOpacity! : number;
   ngOnInit(): void {
     this.compteur = 50000;
-    this.imageOpacity = 0;
-    this.backgroundImage = "./assets/image1.jpg";
-    this.backgroundImages = ["./assets/image1.jpg","./assets/image2.jpg"];
-    const interval = setInterval(() =>{ //
+    this.imageOpacity = 1;
+    this.backgroundImage = "./assets/Image1.png";
+   // this.backgroundImages = ["./assets/image1.jpg","./assets/image2.jpg","./assets/image3.jpg","./assets/image4.jpg","./assets/image5.jpg","./assets/image6.jpg"];
+   /* const interval = setInterval(() =>{ //
      
       if(this.compteur ==50000){
         this.imageOpacity = 0;
@@ -31,7 +31,7 @@ export class ComingSoonComponent implements OnInit {
       if(this.compteur == 0){
       this.compteur = 50000;
       }
-    }, 10);
+    }, 10);*/
   }
 
   styleObject(): Object {

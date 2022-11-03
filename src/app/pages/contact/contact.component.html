@@ -1,37 +1,51 @@
+
+
 <div class="col d-flex justify-content-center">
-    <div class="card" style="width:50%;margin-top: 10%;">
-        <div class="card-body">
-            <form>
+
+    <div style="width:50%;background-color: transparent !important;">
+        <div >
+          <h1 class="contact-title1">EthoProtectio</h1>
+          <h2 class="contact-title2">L'étude du comportement pour mieux protéger</h2>
+          <p class="contact-title3">Intervient sur toute la France et pays Francophones</p>
+          <p class="contact-title3">Tél : +33637067201</p>
+          <p class="contact-title3">Contact.ethoprotectio@gmail.com</p>
+            <form ngNativeValidate [formGroup]="jobForm" (ngSubmit)="save()">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col col-8">
+                <p style="text-align:right;"  class="contact-text">* Informations obligatoires</p>
+
                 <div class="mb-3">
-                    <label  class="form-label" for="nomPrenom">Nom et prénom</label>
+                    <input type="text" class="form-control contact-box" id="nomPrenom" name="nomPrenom" formControlName="firstName" placeholder="Nom et Prénom *" required/>
                     
-                    <input type="text" class="form-control" id="nomPrenom" [(ngModel)]="model.nomPrenom" name="nomPrenom" >
                 </div>
                 <div class="mb-3">
-                    <label  class="form-label">Société</label>
-                    <input type="text" class="form-control" id="societe" [(ngModel)]="model.societe" name="societe">
+                    <input type="text" class="form-control contact-box" id="societe" name="societe" formControlName="societe" placeholder="Société *" required>
+                  
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Email</label>
-                    <input type="email" class="form-control"  id="email" [(ngModel)]="model.email" name="email" ngModel email>
+                    <input type="email" class="form-control contact-box"  id="email"  name="email" formControlName="email" placeholder="Email *" required>
+                  
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Numéro de téléphone</label>
-                    <input type="number" class="form-control" id="numeroTel" [(ngModel)]="model.numeroTel" name="numeroTel">
+                    <input type="number" class="form-control contact-box" id="numeroTel"  name="numeroTel" formControlName="phone" placeholder="Téléphone">
+                    
                 </div>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <textarea type="text" class="form-control contact-box" id="numeroTel"  name="message" formControlName="message" style="height:200px" placeholder="Message..." >
+                    </textarea> 
+                  
+              </div>
+              
 
                 <div class="container">
                     <div class="col-md-12 text-center">
-                        <div *ngIf="canSendMail == true">
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                        <a [href]="'mailto:' + mailtovalue">MESSAGE</a>
-                        </div>
-                        <div *ngIf="canSendMail == false">
-                            <button type="submit" class="btn btn-secondary" disabled>Envoyer</button>
-                            </div>
+                            <button type="submit" class="btn-contact">Envoyer</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>

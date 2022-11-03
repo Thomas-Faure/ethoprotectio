@@ -27,12 +27,12 @@ export class ContactForm {
     }
     public clearText(){
         this.nomPrenom = this.nomPrenom?.replace("&body=","")
-        this.email = this.nomPrenom?.replace("&body=","")
-        this.societe = this.nomPrenom?.replace("&body=","")
+        this.email = this.email?.replace("&body=","")
+        this.societe = this.societe?.replace("&body=","")
 
         this.nomPrenom = this.nomPrenom?.replace("subject=","")
-        this.email = this.nomPrenom?.replace("subject=","")
-        this.societe = this.nomPrenom?.replace("subject=","")
+        this.email = this.email?.replace("subject=","")
+        this.societe = this.societe?.replace("subject=","")
 
 
     }

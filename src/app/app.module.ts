@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRoutingModule
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -18,6 +18,10 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrestationsComponent } from './pages/prestations/prestations.component';
 import { ConnaitreComponent } from './pages/connaitre/connaitre.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 export function playerFactory() {
   return player;
@@ -35,7 +39,7 @@ export function playerFactory() {
     ContactComponent,
     PrestationsComponent,
     ConnaitreComponent,
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,7 +47,11 @@ export function playerFactory() {
     NgbPaginationModule,
     NgbAlertModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
