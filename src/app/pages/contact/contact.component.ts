@@ -23,23 +23,16 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-
-
   showSuccess() {
-    this.toastService.show('Message bien envoyé', { classname: 'bg-success text-light', delay: 10000 });
+    this.toastService.show('Toutes les informations sont correctes', { classname: 'bg-success text-light', delay: 10000 });
   }
-
-
-
-
   save(): void {
     this.submitted = true;
     if (this.jobForm.status == "VALID") {
       let msg: string = "Nom et Prénom : " + encodeURIComponent(this.jobForm.value.firstName!) + "%0ASociete: " +
         encodeURIComponent(this.jobForm.value.societe!) + "%0ANumero Téléphone : " + (this.jobForm.value.phone == null ? "non renseigné" : encodeURIComponent(this.jobForm.value.phone!)) + "%0AMail : " + encodeURIComponent(this.jobForm.value.email!) + "%0AMessage : " + encodeURIComponent(this.jobForm.value.message == null ? '' : this.jobForm.value.message!);
         this.showSuccess();
-        window.location.href = "mailto:" + 'claire@gmail.com?subject=Client&body=' + msg;
+        window.location.href = "mailto:" + 'contact.ethoprotectio@gmail.com?subject=Client&body=' + msg;
     }
   }
 

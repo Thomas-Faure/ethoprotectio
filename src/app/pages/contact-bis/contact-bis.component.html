@@ -1,1 +1,44 @@
-<p>contact-bis works!</p>
+<div class=" d-flex justify-content-center">
+    <div style="background-color: rgba(255,255, 255,  0.4)  !important;padding:10px 10px 10px 10px;width: 70%;border-radius: 10px;">
+        <div>
+            <form ngNativeValidate [formGroup]="jobForm" (ngSubmit)="save()">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control  contact-bis-box" id="nomPrenom" name="nomPrenom"
+                                formControlName="firstName" placeholder="Nom et Prénom *" required />
+
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control  contact-bis-box" id="societe" name="societe"
+                                formControlName="societe" placeholder="Société *"  required>
+
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control contact-bis-box" id="email" name="email"
+                                formControlName="email" placeholder="Email *"  required>
+
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control contact-bis-box" id="numeroTel" name="numeroTel"
+                                formControlName="phone" placeholder="Téléphone">
+
+                        </div>
+                        <p style="text-align:right; padding-bottom: 20px;"  class="contact-text contact-title3">* Informations obligatoires</p>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="container">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn-contact">Envoyer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>

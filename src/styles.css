@@ -10,7 +10,9 @@
     --main-color-orange: #BE8C6B;
     --main-police-title: 'Copperplate Gothic Light', arial;
     --main-police-text: 'Bahnschrift Light', arial;
-  }
+
+    --form-input-contact-font-size: ''
+}
 
 /*
 NAV BAR
@@ -23,16 +25,24 @@ a:hover {
     text-decoration: underline;
 }
 
+.title_underline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .navbar .navbar-nav .nav-link {
     color: #000000;
     font-size: 1.1em;
 }
-.navbar .navbar-nav .nav-link:hover{
+
+.navbar .navbar-nav .nav-link:hover {
     color: black;
 }
-.navbar-logo-centered .navbar-nav .nav-link{
+
+.navbar-logo-centered .navbar-nav .nav-link {
     padding: .5em 1em;
 }
+
 /**
 COMING SOON
 **/
@@ -40,24 +50,25 @@ COMING SOON
 #comingsoon {
     color: Black
 }
-.btn-comingsoon{
-    color:white;
+
+.btn-comingsoon {
+    color: white;
     font-size: 25px;
     padding: 5px 10px 5px 10px;
- 
+
     font-family: var(--main-police-title);
     background-color: var(--main-color-red);
 }
 
 .required:after {
-    content:" *";
+    content: " *";
     color: red;
-  }
+}
 
 
 #comingsoonimg {
- 
-    background: url("./assets/image1.jpg") no-repeat center center fixed #000; 
+
+    background: url("./assets/image1.jpg") no-repeat center center fixed #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -65,21 +76,33 @@ COMING SOON
 }
 
 
-.commingsoonTitle{
+.commingsoonTitle {
     font-family: var(--main-police-title);
-    font-size: 100px;
 }
 
-.commingsoonText{
+.commingsoonText {
     font-family: var(--main-police-text);
     font-size: 20px;
 }
 
-.nav-bar-menu-text{
-    font-family:  var(--main-police-title);
+.nav-bar-menu-text {
+    font-family: var(--main-police-title);
     font-size: 30px !important;
 }
 
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .commingsoonTitle {
+        font-size: 80px;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .commingsoonTitle {
+        font-size: 60px;
+    }
+}
 
 
 .parallax {
@@ -110,53 +133,208 @@ COMING SOON
     background-size: cover;
 }
 
+/**CONTACT BIS**/
+
+.contact-bis-box::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+    font-family: var(--main-police-title);
+
+}
+
+.contact-bis-box:focus {
+    background-color: #9E3134;
+    font-family: var(--main-police-text);
+    color: white;
+}
+
+.contact-bis-box{
+    background-color: #9E3134;
+    font-family: var(--main-police-text);
+    color: white;
+}
+
+@media screen and (min-width: 710px) {
+    .contact-bis-box::placeholder {
+        font-size: 30px;
+    }
+    .contact-bis-box {
+        font-size: 30px;
+    }
+ 
+}
+
+
+@media screen and (min-width: 550px) and (max-width: 709px) {
+    .contact-bis-box::placeholder {
+        font-size: 20px;
+    }
+    .contact-bis-box {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .contact-bis-box::placeholder {
+        font-size: 12px;
+    }
+    .contact-bis-box {
+        font-size: 12px;
+    }
+}
 
 /** CONTACT FORM*/
 
-.contact-title1{
+@media screen and (min-width: 710px) {
+    .contact-title1 {
+        font-size: 40px;
+    }
+
+    .contact-title2 {
+        font-size: 20px;
+    }
+
+    .contact-title3 {
+        font-size: 20px;
+    }
+
+    .contact-title-mail {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 709px) {
+    .contact-title1 {
+        font-size: 30px;
+    }
+
+    .contact-title2 {
+        font-size: 17px;
+    }
+
+    .contact-title3 {
+        font-size: 15px;
+    }
+
+    .contact-title-mail {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .contact-title1 {
+        font-size: 20px;
+    }
+
+    .contact-title2 {
+        font-size: 17px;
+    }
+
+    .contact-title3 {
+        font-size: 15px;
+    }
+
+    .contact-title-mail {
+        font-size: 15px;
+    }
+}
+
+.contact-title1 {
     font-family: var(--main-police-title);
-    font-size: 40px;
-    margin:0;
+    margin: 0;
+    color: black;
+
     font-weight: bold;
 }
 
-.contact-title2{
+.contact-title2 {
     font-family: var(--main-police-text);
     font-size: 20px;
     margin-bottom: 40px;
-    font-weight: bold;
-}
-.contact-title3{
-    font-family: var(--main-police-text);
-    font-size: 25px;
+    color: black;
     font-weight: bold;
 }
 
-.contact-text{
-    color:black;
-    margin:0;
+.contact-title3 {
+    font-family: var(--main-police-text);
+    font-weight: bold;
+    color: black;
+
+}
+
+.contact-title-mail {
+    font-family: var(--main-police-text);
+    font-weight: bold;
+    color: black;
+
+}
+
+.contact-text {
+    color: black;
+    margin: 0;
     font-family: var(--main-police-text);
     font-weight: bold;
 }
 
-.contact-box{
-    border-color:black !important;
+@media screen and (min-width: 710px) {
+    .contact-box::placeholder {
+        font-size: 30px;
+    }
+    .contact-box{
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 709px) {
+    .contact-box::placeholder {
+        font-size: 20px;
+    }
+    .contact-box{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .contact-box::placeholder {
+        font-size: 12px;
+    }
+    .contact-box{
+        font-size: 12px;
+    }
+}
+
+.contact-box::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: var(--main-police-title);
+}
+
+.contact-box:focus {
+    font-family: var(--main-police-text);
+    color: black;
+}
+
+.contact-box {
+    font-family: var(--main-police-text);
+    color: black;
+    border-color: black !important;
     border-width: 2px;
 }
 
-.contact-alert{
+.contact-alert {
     height: 40px;
 }
-.btn-contact{
-    color:white;
+
+.btn-contact {
+    color: white;
     font-size: 25px;
     padding: 5px 10px 5px 10px;
- 
+
     font-family: var(--main-police-title);
     background-color: var(--main-color-red);
 }
 
-#toast-container > div {
-    opacity:1;
+#toast-container>div {
+    opacity: 1;
 }
-

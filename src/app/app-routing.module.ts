@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'contactbis', component: ContactBisComponent, pathMatch: 'full' },
   { path: 'prestations', component: PrestationsComponent, pathMatch: 'full' },
 
-  { path: '', component: AccueilComponent, pathMatch: 'full' },
+  { path: '', component: ComingSoonComponent, pathMatch: 'full' },
 
   { path: '**', component: PageNotFoundComponent },
 
