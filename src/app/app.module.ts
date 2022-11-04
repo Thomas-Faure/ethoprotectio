@@ -20,8 +20,8 @@ import { PrestationsComponent } from './pages/prestations/prestations.component'
 import { ConnaitreComponent } from './pages/connaitre/connaitre.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { ToastrModule } from 'ngx-toastr';
+import { ToastsContainer } from './components/toasts-container/toasts-container.component';
+import { ContactBisComponent } from './pages/contact-bis/contact-bis.component';
 
 export function playerFactory() {
   return player;
@@ -39,6 +39,8 @@ export function playerFactory() {
     ContactComponent,
     PrestationsComponent,
     ConnaitreComponent,
+    ToastsContainer,
+    ContactBisComponent,
     ],
   imports: [
     BrowserModule,
@@ -51,7 +53,6 @@ export function playerFactory() {
     FontAwesomeModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

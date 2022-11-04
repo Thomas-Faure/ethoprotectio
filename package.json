@@ -32,7 +32,6 @@
     "jquery": "^3.6.1",
     "lottie-web": "^5.9.6",
     "ngx-lottie": "^8.2.1",
-    "ngx-toastr": "^15.2.1",
     "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "socket.io-client": "^4.5.1",
