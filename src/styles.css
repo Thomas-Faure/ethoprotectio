@@ -1,24 +1,125 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
+@font-face {
+    font-family: "Constan";
+    src: local("Constan"), url(./assets/fonts/constan.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: local("Calibri"), url(./assets/fonts/calibril.ttf) format("truetype");
+}
 
 :root {
-    --main-color-blue: #A6D3F2;
+    --main-color-blue: #8497B0;
     --main-color-grey: #969B9F;
     --main-color-blue2: #919EB1;
     --main-color-red: #9E3134;
     --main-color-orange: #BE8C6B;
-    --main-police-title: 'Copperplate Gothic Light', arial;
-    --main-police-text: 'Bahnschrift Light', arial;
+    --main-police-title: 'Constan';
+    --main-police-text: 'Calibri';
+
+    --main-title-font-size-XL: 35px;
+    --main-title-font-size-M: 25px;
+    --main-title-font-size-S: 20px;
+
+    --main-text-font-size-XL: 20px;
+    --main-text-font-size-M: 18px;
+    --main-text-font-size-S: 15px;
+
+    --main-button-font-size-XL: 25px;
+    --main-button-font-size-M: 20px;
+    --main-button-font-size-S: 15px;
 
     --form-input-contact-font-size: ''
+}
+
+/*
+FOOTER
+*/
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 701px) {
+    .text-footer {
+        font-size: 20px;
+    }
+
+    .footer-titres {
+        font-size: var(--main-title-font-size-XL);
+    }
+
+    .bouton-footer {
+        font-size: var(--main-button-font-size-XL);
+
+    }
+
+    .footer-logo {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .text-footer {
+        font-size: 10px;
+    }
+
+    .footer-titres {
+        font-size: 15px !important;
+    }
+
+    .bouton-footer{
+        font-size: 12px;
+
+    }
+
+    .footer-logo {
+        height: 50px;
+    }
+}
+
+
+
+.bouton-footer {
+    color: white;
+    font-family: var(--main-police-title);
+
+    background-color: var(--main-color-red);
+}
+
+.text-footer {
+    font-family: var(--main-police-text);
+    color: black;
+}
+
+.footer-titres {
+    margin-bottom: 0px !important;
+    font-family: var(--main-police-title);
+    color: var(--main-color-red);
+}
+
+.footer-div {
+    background-color: #8497B0 !important;
 }
 
 /*
 NAV BAR
 
 */
+.nav-style {
+    position: fixed;
+    z-index: 99;
+    background-color: var(--main-color-blue) !important;
+}
 
+
+
+
+.nav-bar-menu-text {
+    font-family: var(--main-police-title);
+    font-size: 20px !important;
+    color: var(--main-color-red) !important;
+}
 
 a:hover {
     font-weight: bold;
@@ -43,71 +144,177 @@ a:hover {
     padding: .5em 1em;
 }
 
+
+
+
 /**
-COMING SOON
+
+Accueil
 **/
 
-#comingsoon {
-    color: Black
+.row-logos {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
 }
 
-.btn-comingsoon {
-    color: white;
-    font-size: 25px;
-    padding: 5px 10px 5px 10px;
+.accueil-faisons {
+    background-color: var(--main-color-blue);
+    padding-bottom: 40px !important;
 
-    font-family: var(--main-police-title);
+}
+
+.accueil-div-separator {
+    height: 400px !important;
+    background-color: white !important;
+}
+
+.accueil-hr {
+    width: 10%;
+    height: 2px !important;
+    margin-bottom: 20px !important;
+    border: none;
+    margin: auto;
+    opacity: 1 !important;
     background-color: var(--main-color-red);
-}
-
-.required:after {
-    content: " *";
-    color: red;
-}
-
-
-#comingsoonimg {
-
-    background: url("./assets/image1.jpg") no-repeat center center fixed #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
-.commingsoonTitle {
-    font-family: var(--main-police-title);
-}
-
-.commingsoonText {
-    font-family: var(--main-police-text);
-    font-size: 20px;
-}
-
-.nav-bar-menu-text {
-    font-family: var(--main-police-title);
-    font-size: 30px !important;
+    color: var(--main-color-red);
 }
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 601px) {
-    .commingsoonTitle {
-        font-size: 80px;
+    .accueil-paralax-titre {
+        font-size: 70px;
+    }
+
+    .accueil-paralax-sous-titre {
+        font-size: 50px;
     }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-    .commingsoonTitle {
-        font-size: 60px;
+    .accueil-paralax-titre {
+        font-size: 40px;
+    }
+
+    .accueil-paralax-sous-titre {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .card-accueil-activite {
+        width: 400px;
     }
 }
 
 
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .card-accueil-activite {
+        width: 200px;
+    }
+}
+
+
+
+@media screen and (min-width: 1051px) {
+    .accueil-titres-accompagne {
+        font-size: var(--main-title-font-size-XL);
+
+    }
+
+    .img-a-propros-master {
+        width: 150px;
+        height: 150px;
+    }
+
+    .img-a-propros-leec {
+        width: 252px;
+        height: 200px;
+    }
+
+    .img-a-propros-couveuse {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 1050px) {
+    .accueil-titres-accompagne{
+        font-size: var(--main-title-font-size-M);
+    }
+
+    .img-a-propros-master {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-a-propros-leec {
+        width: 200px;
+        height: 150px;
+    }
+
+    .img-a-propros-couveuse {
+        width: 140px;
+        height: 100px;
+    }
+}
+
+.accueil-titres-accompagne{
+    padding-top: 40px;
+    margin-bottom: 0px !important;
+    font-family: var(--main-police-title);
+    color: var(--main-color-red);
+}
+
+
+.card-accueil-activite {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+
+.accueil-paralax-titre {
+    font-family: var(--main-police-title);
+    color: var(--main-color-red);
+}
+
+.accueil-paralax-sous-titre {
+    font-family: var(--main-police-title);
+    color: var(--main-color-red);
+}
+
+.accueil-titres {
+    padding-top: 40px;
+    margin-bottom: 0px !important;
+    font-family: var(--main-police-title);
+    color: var(--main-color-red);
+    font-size: var(--main-title-font-size-XL);
+}
+
+.accueil-textes {
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    width: 70%;
+    font-family: var(--main-police-text);
+    font-size: var(--main-text-font-size-XL);
+}
+
+.bouton-accueil {
+    font-size: var(--main-button-font-size-XL);
+    color: white;
+    font-family: var(--main-police-title);
+    padding: 5px 20px 5px 20px;
+
+    background-color: var(--main-color-red);
+}
+
 .parallax {
     /* The image used */
-    background-image: url("./assets/image1.jpg");
 
     /* Set a specific height */
     min-height: 800px;
@@ -121,7 +328,7 @@ COMING SOON
 
 .parallax2 {
     /* The image used */
-    background-image: url("./assets/image2.jpg");
+    background-image: url("./assets/image1.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -133,208 +340,69 @@ COMING SOON
     background-size: cover;
 }
 
-/**CONTACT BIS**/
 
-.contact-bis-box::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1;
-    /* Firefox */
-    font-family: var(--main-police-title);
-
-}
-
-.contact-bis-box:focus {
-    background-color: #9E3134;
-    font-family: var(--main-police-text);
-    color: white;
-}
-
-.contact-bis-box{
-    background-color: #9E3134;
-    font-family: var(--main-police-text);
-    color: white;
-}
-
-@media screen and (min-width: 710px) {
-    .contact-bis-box::placeholder {
-        font-size: 30px;
-    }
-    .contact-bis-box {
-        font-size: 30px;
-    }
- 
-}
-
-
-@media screen and (min-width: 550px) and (max-width: 709px) {
-    .contact-bis-box::placeholder {
-        font-size: 20px;
-    }
-    .contact-bis-box {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 549px) {
-    .contact-bis-box::placeholder {
-        font-size: 12px;
-    }
-    .contact-bis-box {
-        font-size: 12px;
-    }
-}
-
-/** CONTACT FORM*/
-
-@media screen and (min-width: 710px) {
-    .contact-title1 {
-        font-size: 40px;
-    }
-
-    .contact-title2 {
-        font-size: 20px;
-    }
-
-    .contact-title3 {
-        font-size: 20px;
-    }
-
-    .contact-title-mail {
-        font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 550px) and (max-width: 709px) {
-    .contact-title1 {
-        font-size: 30px;
-    }
-
-    .contact-title2 {
-        font-size: 17px;
-    }
-
-    .contact-title3 {
-        font-size: 15px;
-    }
-
-    .contact-title-mail {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 549px) {
-    .contact-title1 {
-        font-size: 20px;
-    }
-
-    .contact-title2 {
-        font-size: 17px;
-    }
-
-    .contact-title3 {
-        font-size: 15px;
-    }
-
-    .contact-title-mail {
-        font-size: 15px;
-    }
-}
-
-.contact-title1 {
-    font-family: var(--main-police-title);
-    margin: 0;
-    color: black;
-
-    font-weight: bold;
-}
-
-.contact-title2 {
-    font-family: var(--main-police-text);
-    font-size: 20px;
-    margin-bottom: 40px;
-    color: black;
-    font-weight: bold;
-}
-
-.contact-title3 {
-    font-family: var(--main-police-text);
-    font-weight: bold;
-    color: black;
-
-}
-
-.contact-title-mail {
-    font-family: var(--main-police-text);
-    font-weight: bold;
-    color: black;
-
-}
-
-.contact-text {
-    color: black;
-    margin: 0;
-    font-family: var(--main-police-text);
-    font-weight: bold;
-}
-
-@media screen and (min-width: 710px) {
-    .contact-box::placeholder {
-        font-size: 30px;
-    }
-    .contact-box{
-        font-size: 30px;
-    }
-}
-
-@media screen and (min-width: 550px) and (max-width: 709px) {
-    .contact-box::placeholder {
-        font-size: 20px;
-    }
-    .contact-box{
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 549px) {
-    .contact-box::placeholder {
-        font-size: 12px;
-    }
-    .contact-box{
-        font-size: 12px;
-    }
-}
-
-.contact-box::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    font-family: var(--main-police-title);
-}
-
-.contact-box:focus {
-    font-family: var(--main-police-text);
-    color: black;
-}
-
-.contact-box {
-    font-family: var(--main-police-text);
-    color: black;
-    border-color: black !important;
-    border-width: 2px;
-}
-
-.contact-alert {
-    height: 40px;
-}
-
-.btn-contact {
-    color: white;
-    font-size: 25px;
-    padding: 5px 10px 5px 10px;
-
-    font-family: var(--main-police-title);
-    background-color: var(--main-color-red);
-}
 
 #toast-container>div {
     opacity: 1;
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+    
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: var(--main-color-red);;
+  font-family: var(--main-police-text);
+  font-size: 30px;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+#section04 a {
+  padding-top: 60px;
+}
+#section04 a span {
+  position: absolute;
+  top: 0px;
+  color:var(--main-color-red);;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 5px solid var(--main-color-red);
+  border-bottom: 5px solid var(--main-color-red);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-40px, 40px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-40px, 40px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
 }

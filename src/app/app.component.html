@@ -1,55 +1,61 @@
 <!-- The routed views render in the <router-outlet>-->
-  <div  class="text-center container-fluid">
-
-  <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light" id="navbar" style="background-color: transparent !important;">
+<div class="text-center">
+  <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light  sticky-top nav-style">
     <div class="container-fluid">
-      <a [routerLink]="['/']"><img src = "./assets/logo.svg" alt="My Happy SVG" height="120"/></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" (click)="isMenuCollapsed = !isMenuCollapsed" aria-expanded="false" aria-label="Toggle navigation">
+      <a [routerLink]="['/']"><img src="./assets/logo.svg" alt="My Happy SVG" height="80" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" (click)="isMenuCollapsed = !isMenuCollapsed" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" aria-current="page" [routerLink]="['/']"   [ngClass]="{'title_underline': getCurrentRoute('/')}"  (click)="isMenuCollapsed = true" >Accueil</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['/prestations']"  [class.disabled]="true">Prestations</a>
+            <a class="nav-link nav-bar-menu-text" aria-current="page" [routerLink]="['/']"
+              [ngClass]="{'title_underline': getCurrentRoute('/')}" (click)="isMenuCollapsed = true">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['/connaitre']" [class.disabled]="true">Nous connaitre</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['/contact']"  [ngClass]="{'title_underline': getCurrentRoute('/contact')}" 
-              (click)="isMenuCollapsed = true" >Contact</a>
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/prestations']"
+              [class.disabled]="true">Prestations</a>
           </li>
-         
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/connaitre']" [class.disabled]="true">Nous
+              connaitre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/contact']"
+              [ngClass]="{'title_underline': getCurrentRoute('/contact')}" (click)="isMenuCollapsed = true">Contact</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
-  
-  <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent;">
-    <a class="navbar-brand d-lg-none" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['/comingsoon']" >Accueil</a>
-          </li>     
-            <a class="d-none d-lg-block" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png"></a>
-            <li class="nav-item">
-              <a class="nav-link nav-bar-menu-text" [routerLink]="['/contact']" >Contact</a>
-            </li>  
-        </ul>
+
+  <router-outlet></router-outlet>
+
+  <div class="row footer-div" style="width: 100%;padding: 0%;margin:0%;">
+    <div class="col-4" >
+      <div class=" d-flex align-items-center justify-content-center" style="height:100%">
+
+      <img src="./assets/logo.svg"
+        class="footer-logo" alt="My Happy SVG" />
+      </div>
     </div>
-</nav> -->
-  <ul class="nav justify-content-center"></ul>
+    <div class="col-4" style="text-align:center">
+      <p class="footer-titres">UN PROBLEME, UN PROJET ?</p>
+      <hr class="accueil-hr">
 
-  <router-outlet ></router-outlet>
+      <button type="submit" class="btn-contact bouton-footer">CONTACTEZ-NOUS</button>
 
-
-  </div> 
-
-
+    </div>
+    <div class="col-4" style="text-align:center">
+      <div class=" d-flex align-items-center justify-content-center" style="height:100%">
+      <p class="text-footer">Adresse : XXXXXXXXXXXXX
+      <br>Tél : +33 (0)637067201
+      <br>E-mail : contact@ethoprotectio.fr</p>
+      </div>
+    </div>
+    <p class="text-footer" style="text-align:center">©EthoProtectio, Tous droits réservés – Mentions Légales</p>
+  </div>
+</div>

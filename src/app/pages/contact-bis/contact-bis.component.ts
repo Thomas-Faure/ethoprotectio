@@ -12,7 +12,7 @@ export class ContactBisComponent implements OnInit {
   submitted = false;
   jobForm = this.fb.group({
     firstName: ['', [Validators.required]],
-    societe: ['', [Validators.required]],
+    organisme: ['', [Validators.required]],
     email: ['', [Validators.required]],
     phone: [''],
   });
@@ -31,10 +31,10 @@ export class ContactBisComponent implements OnInit {
   save(): void {
     this.submitted = true;
     if (this.jobForm.status == "VALID") {
-      let msg: string = "Nom et Prénom : " + encodeURIComponent(this.jobForm.value.firstName!) + "%0ASociete: " +
-        encodeURIComponent(this.jobForm.value.societe!) + "%0ANumero Téléphone : " + (this.jobForm.value.phone == null ? "non renseigné" : encodeURIComponent(this.jobForm.value.phone!)) + "%0AMail : " + encodeURIComponent(this.jobForm.value.email!);
+      let msg: string = "Nom et Prénom : " + encodeURIComponent(this.jobForm.value.firstName!) + "%0AOrganisme : " +
+        encodeURIComponent(this.jobForm.value.organisme!) + "%0ANumero Téléphone : " + (this.jobForm.value.phone == null ? "non renseigné" : encodeURIComponent(this.jobForm.value.phone!)) + "%0AMail : " + encodeURIComponent(this.jobForm.value.email!);
         this.showSuccess();
-        window.location.href = "mailto:" + 'contact.ethoprotectio@gmail.com?subject=Client&body=' + msg;
+        window.location.href = "mailto:" + 'contact@ethoprotectio.fr?subject=Client&body=' + msg;
     }
   }
 
