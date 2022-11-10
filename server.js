@@ -19,13 +19,13 @@ const app = express();
 };*/
 
 // Serve only the static files form the dist directory
-app.use(function (req, res, next) {
+/*app.use(function (req, res, next) {
 	if (req.secure) {
 		next();
 	} else {
 		res.redirect('https://' + req.headers.host + req.url);
 	}
-});
+});*/
 app.use(express.static('./dist/objective-viewer-client'));
 
 
