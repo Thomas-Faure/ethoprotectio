@@ -7,9 +7,9 @@ const https = require('https');
 
 const app = express();
 // Certificate
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.ethoprotectio.fr/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/www.ethoprotectio.fr/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/www.ethoprotectio.fr/chain.pem', 'utf8');
+//const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.ethoprotectio.fr/privkey.pem', 'utf8');
+//const certificate = fs.readFileSync('/etc/letsencrypt/live/www.ethoprotectio.fr/cert.pem', 'utf8');
+///const ca = fs.readFileSync('/etc/letsencrypt/live/www.ethoprotectio.fr/chain.pem', 'utf8');
 
 console.log(privateKey);
 console.log(certificate);
@@ -37,13 +37,13 @@ app.get('/*', (req, res) =>
 
 // Starting both http & https servers
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+//const httpsServer = https.createServer(credentials, app);
 
 // Start the app by listening on the default Heroku port
 
-httpsServer.listen(443, () => {
+/*httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
-});
+});*/
 
 
 httpServer.listen(80, () => {
