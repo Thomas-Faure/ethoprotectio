@@ -15,17 +15,17 @@
               [ngClass]="{'title_underline': getCurrentRoute('/')}" (click)="isMenuCollapsed = true">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['/prestations']"
+            <a class="nav-link nav-bar-menu-text" [routerLink]="['/prestations']" (click)="isMenuCollapsed = true"
               >Prestations</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-bar-menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle nav-bar-menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" (click)="isMenuCollapsed = !isMenuCollapsed" aria-expanded="false">
               Nous connaitre
             </a>
             <ul class="dropdown-menu  nav-bar-menu-text " aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']">Qui suis-je ?</a></li>
               <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']">EthoProtectio</a></li>
-              <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']">L'éthologie</a></li>
+              <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']" >L'éthologie</a></li>
             </ul>
           </li>
           
