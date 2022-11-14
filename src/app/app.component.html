@@ -2,7 +2,7 @@
 <div class="text-center">
   <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light  sticky-top nav-style">
     <div class="container-fluid">
-      <a [routerLink]="['/']"><img src="./assets/logo.svg" alt="My Happy SVG" height="80" /></a>
+      <a [routerLink]="['/']"><img src="./assets/logo.svg" alt="My Happy SVG" height="120" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" (click)="isMenuCollapsed = !isMenuCollapsed" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -16,12 +16,19 @@
           </li>
           <li class="nav-item">
             <a class="nav-link nav-bar-menu-text" [routerLink]="['/prestations']"
-              [class.disabled]="true">Prestations</a>
+              >Prestations</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-bar-menu-text" [routerLink]="['/connaitre']" [class.disabled]="true">Nous
-              connaitre</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-bar-menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nous connaitre
+            </a>
+            <ul class="dropdown-menu  nav-bar-menu-text " aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']">Qui suis-je ?</a></li>
+              <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']">EthoProtectio</a></li>
+              <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']">L'éthologie</a></li>
+            </ul>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link nav-bar-menu-text" [routerLink]="['/contact']"
               [ngClass]="{'title_underline': getCurrentRoute('/contact')}" (click)="isMenuCollapsed = true">Contact</a>
@@ -34,12 +41,12 @@
 
   <router-outlet></router-outlet>
 
-  <div class="row footer-div" style="width: 100%;padding: 0%;margin:0%;">
+  <div class="row footer-div" style="width: 100%;padding: 0%;margin:0%;position:absolute">
     <div class="col-4" >
       <div class=" d-flex align-items-center justify-content-center" style="height:100%">
 
       <img src="./assets/logo.svg"
-        class="footer-logo" alt="My Happy SVG" />
+        class="footer-logo" alt="Logo" />
       </div>
     </div>
     <div class="col-4" style="text-align:center">
