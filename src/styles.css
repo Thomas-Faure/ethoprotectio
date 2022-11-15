@@ -229,7 +229,7 @@ Accueil
     }
 
     .img-a-propros-leec {
-        width: 252px;
+        width: 300px;
         height: 200px;
     }
 
@@ -238,6 +238,8 @@ Accueil
         height: 150px;
     }
 }
+
+
 
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -537,3 +539,12 @@ Accueil
 .row:nth-of-type(even) {
     flex-direction: row-reverse;
   }
+
+/***erreur***/
+.erreur404-titres{
+    padding-top: 80px;
+    margin-bottom: 0px !important;
+    font-family: var(--main-police-title);
+    color: var(--main-color-red);
+    font-size: 80px;
+}

@@ -1,5 +1,20 @@
-<div class="container d-flex align-items-center justify-content-center" style="height: 100%;padding-top: 200px;">
+<p style="padding-top:150px"></p>
 
-    <h1>- ERREUR 404 -</h1>
+<div>
+    <div style="padding-bottom:200px">
+        <div class="row d-flex justify-content-center" style="width: 100%;padding: 0%;margin:0%;">
+            <!--Grid column-->
+            <div class="col-md-6">
+
+                <p class="erreur404-titres">ERREUR 404</p>
+                <hr class="accueil-hr">
+                <button type="submit" class="bouton-accueil" [routerLink]="['/']"
+                [ngClass]="{'title_underline': getCurrentRoute('/')}">RETOUR ACCUEIL</button>
+
+
+            </div>
+        </div>
+        <!--Grid column-->
+    </div>
 
 </div>
