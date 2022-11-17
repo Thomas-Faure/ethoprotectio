@@ -7,6 +7,7 @@ import { ConnaitreComponent } from './pages/connaitre/connaitre.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ContactBisComponent } from './pages/contact-bis/contact-bis.component';
 import { PrestationsComponent } from './pages/prestations/prestations.component';
+import { MentionsComponent } from './mentions/mentions.component';
 
 const routes: Routes = [
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent, pathMatch: 'full' },
   { path: 'contactbis', component: ContactBisComponent, pathMatch: 'full' },
   { path: 'prestations', component: PrestationsComponent, pathMatch: 'full' },
+  { path: 'mentions', component: MentionsComponent, pathMatch: 'full' },
 
   { path: '', component: AccueilComponent, pathMatch: 'full' },
 

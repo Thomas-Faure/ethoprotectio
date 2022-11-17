@@ -14,6 +14,7 @@ import { ConnaitreComponent } from './pages/connaitre/connaitre.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastsContainer } from './components/toasts-container/toasts-container.component';
 import { ContactBisComponent } from './pages/contact-bis/contact-bis.component';
+import { MentionsComponent } from './mentions/mentions.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ContactBisComponent } from './pages/contact-bis/contact-bis.component';
     ConnaitreComponent,
     ToastsContainer,
     ContactBisComponent,
+    MentionsComponent,
     ],
   imports: [
     BrowserModule,

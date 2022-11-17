@@ -12,7 +12,7 @@
 }
 
 :root {
-    --main-color-blue: #8497B0;
+    --main-color-blue: #94A1BE;
     --main-color-grey: #969B9F;
     --main-color-blue2: #919EB1;
     --main-color-red: #9E3134;
@@ -218,24 +218,21 @@ Accueil
 
 
 @media screen and (min-width: 1051px) {
-    .accueil-titres-accompagne {
-        font-size: var(--main-title-font-size-XL);
 
-    }
 
     .img-a-propros-master {
-        width: 150px;
+        width: auto;
         height: 150px;
     }
 
     .img-a-propros-leec {
-        width: 300px;
+        width: auto;
         height: 200px;
     }
 
     .img-a-propros-couveuse {
-        width: 200px;
-        height: 150px;
+        width: auto;
+        height: 100px;
     }
 }
 
@@ -260,27 +257,49 @@ Accueil
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 1050px) {
-    .accueil-titres-accompagne{
-        font-size: var(--main-title-font-size-M);
-    }
+   
 
     .img-a-propros-master {
-        width: 100px;
+        width: auto;
         height: 100px;
     }
 
     .img-a-propros-leec {
-        width: 200px;
+        width: auto;
         height: 150px;
     }
 
     .img-a-propros-couveuse {
-        width: 140px;
-        height: 100px;
+        width: auto;
+        height: 50px;
     }
 }
 
+@media screen and (min-width: 1510px) {
+    .accueil-titres-accompagne {
+        font-size: var(--main-title-font-size-XL);
+
+    }
+}
+@media screen and (min-width: 1095px) and (max-width: 1509px) {
+    .accueil-titres-accompagne{
+        font-size: var(--main-title-font-size-M);
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 1094px) {
+    .accueil-titres-accompagne{
+        font-size: var(--main-title-font-size-S);
+    }
+}
+@media screen and (max-width: 575px) {
+    .accueil-titres-accompagne{
+        font-size: var(--main-title-font-size-XL);
+    }
+}
+
+
 .accueil-titres-accompagne{
+   
     padding-top: 40px;
     margin-bottom: 0px !important;
     font-family: var(--main-police-title);
