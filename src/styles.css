@@ -98,10 +98,7 @@ FOOTER
     color: var(--main-color-red);
 }
 
-.footer-div {
-    background-color: #8497B0 !important;
-    width: 100%;padding: 0%;margin:0%;position:absolute;bottom: 0;height: 200px;
-}
+
 
 /*
 NAV BAR
@@ -613,5 +610,13 @@ Accueil
 /** MAIN DIV */
 
 .app-component-main-div{
-    min-height: 100%;position: relative; padding:0 0 200px;
+    min-height: 100%;position: relative; padding:0 0 300px;
 }
+
+.footer-div {
+    background-color: #8497B0 !important;
+    width: 100%;padding: 0%;margin:0%;position:absolute;bottom: 0;height: 300px;
+}
+
+
+
