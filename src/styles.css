@@ -100,6 +100,7 @@ FOOTER
 
 .footer-div {
     background-color: #8497B0 !important;
+    width: 100%;padding: 0%;margin:0%;position:absolute;bottom: 0;height: 200px;
 }
 
 /*
@@ -152,9 +153,16 @@ a:hover {
 Accueil
 **/
 
+.parallax-accueil-div{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
 .row-logos {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
+    width: 100%;padding: 0%;margin:0%;
 }
 
 .accueil-faisons {
@@ -215,8 +223,6 @@ Accueil
     }
 }
 
-
-
 @media screen and (min-width: 1051px) {
 
 
@@ -242,20 +248,17 @@ Accueil
   }
   
   #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem;   
   }
   
   #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;            /* Footer height */
+    height: 2.5rem;           
   }
 
 
-
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 1050px) {
    
 
@@ -378,12 +381,20 @@ Accueil
 }
 
 
+.secteur-activite-card{
+    width: 100%;padding: 0%;margin:0%;
+}
+
+
 
 #toast-container>div {
     opacity: 1;
 }
 
-.demo a {
+.parralax-text{
+    padding-top: 200px;  position: relative;height: 100%;
+}
+.parralax-text a {
   position: absolute;
   bottom: 20px;
   z-index: 2;
@@ -398,10 +409,16 @@ Accueil
   text-decoration: none;
   transition: opacity .3s;
 }
-.demo a:hover {
+.parralax-text a:hover {
   opacity: .5;
 }
 
+#section04{
+    position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 #section04 a {
   padding-top: 30px;
 }
@@ -514,7 +531,13 @@ Accueil
 
 /** CONTACT FORM*/
 
+.contact-fond-gris{
+    background-color: rgba(255,255, 255,  0.6)   !important;padding:200px 10px 10px 10px;width:80%;border-radius: 10px;
+}
 
+.contact-informations-obligatoires{
+    text-align:right;width: 83%;
+}
 
 .bouton-contact{
     font-size: var(--main-button-font-size-XL);
@@ -582,4 +605,13 @@ Accueil
     font-family: var(--main-police-title);
     color: var(--main-color-red);
     font-size: 80px;
+}
+
+
+
+
+/** MAIN DIV */
+
+.app-component-main-div{
+    min-height: 100%;position: relative; padding:0 0 200px;
 }
