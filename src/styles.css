@@ -12,7 +12,9 @@
 }
 
 :root {
-    --main-color-blue: #94A1BE;
+    --main-color-blanc: #F2F2F2;
+
+    --main-color-blue: #ADB9CA;
     --main-color-grey: #969B9F;
     --main-color-blue2: #919EB1;
     --main-color-red: #9E3134;
@@ -35,6 +37,11 @@
     --form-input-contact-font-size: ''
 }
 
+
+body{
+    background-color: var( --main-color-blanc);
+}
+
 /*
 FOOTER
 */
@@ -55,7 +62,7 @@ FOOTER
     }
 
     .footer-logo {
-        height: 125px;
+        height: 200px;
     }
 }
 
@@ -604,18 +611,45 @@ Accueil
     font-size: 80px;
 }
 
+/***
+    PRESTATIONS
+ ***/
 
+ .accompagnement-scientifique-bloc{
+    background:var(--main-color-blue);width: 100%;padding: 0%;margin:0%;
+ }
+ .accompagnement-scientifique-images{
+    min-height:300px;
+     background-size: cover;
+      background-repeat: no-repeat;
+    background-position: 50% 50%;
+ }
+
+ .prestations-bloc{
+    width: 100%;padding: 0%;margin:0%;
+ }
+
+ .prestations-images{
+    min-height:300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+ }
+ .prestations-bloc-prestation{
+    background:var(--main-color-blue);width: 100%;padding: 0%;margin:0%
+ }
 
 
 /** MAIN DIV */
 
 .app-component-main-div{
-    min-height: 100%;position: relative; padding:0 0 300px;
+    min-height: 100%;position: relative; padding:0 0 550px;
 }
 
 .footer-div {
-    background-color: #8497B0 !important;
-    width: 100%;padding: 0%;margin:0%;position:absolute;bottom: 0;height: 300px;
+    padding-top:50px;
+    background-color: var(--main-color-blue) !important;
+    width: 100%;;margin:0%;position:absolute;bottom: 0;height: 550px;
 }
 
 
