@@ -536,7 +536,7 @@ Accueil
 /** CONTACT FORM*/
 
 .contact-fond-gris{
-    background-color: rgba(255,255, 255,  0.6)   !important;padding:200px 10px 10px 10px;width:80%;border-radius: 10px;
+    background-color: var(--main-color-blanc) !important;padding:200px 10px 10px 10px;width:80%;border-radius: 10px;
 }
 
 .contact-informations-obligatoires{
