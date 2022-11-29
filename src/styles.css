@@ -647,13 +647,13 @@ Accueil
 /** MAIN DIV */
 
 .app-component-main-div{
-    min-height: 100%;position: relative; padding:0 0 550px;
+    min-height: 100%;position: relative; padding:0 0 600px;
 }
 
 .footer-div {
-    margin-top:50px;
+
     background-color: var(--main-color-blue) !important;
-    width: 100%;;margin:0%;position:absolute;bottom: 0;height: 600px;
+    width: 100%;margin:0%;position:absolute;bottom: 0;height: 600px;
 }
 
 
