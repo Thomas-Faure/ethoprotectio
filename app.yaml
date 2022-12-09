@@ -7,8 +7,8 @@ env_variables:
 
 handlers:
 - url: /
-  static_files: dist/objective-viewer-client/index.html
-  upload: dist/objective-viewer-client/index.html
+  static_files: dist/Ethoprotectio/index.html
+  upload: dist/Ethoprotectio/index.html
 
 - url: /
-  static_dir: dist/objective-viewer-client
+  static_dir: dist/Ethoprotectio

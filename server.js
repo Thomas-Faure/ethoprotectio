@@ -26,11 +26,11 @@ const app = express();
 		res.redirect('https://' + req.headers.host + req.url);
 	}
 });*/
-app.use(express.static('./dist/objective-viewer-client'));
+app.use(express.static('./dist/Ethoprotectio'));
 
 
 app.get('/*', (req, res) =>
-	res.sendFile('index.html', { root: 'dist/objective-viewer-client/' }),
+	res.sendFile('index.html', { root: 'dist/Ethoprotectio/' }),
 );
 
 // Starting both http & https servers
