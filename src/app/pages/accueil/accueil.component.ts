@@ -21,8 +21,8 @@ export class AccueilComponent implements OnInit {
     this.compteur = 15000;
     this.apparition = true;
     this.imageOpacity = 1;
-    this.backgroundImage = "./assets/parallax1.jpg";
-    this.backgroundImages = ["./assets/parallax1.jpg", "./assets/parallax2.jpg", "./assets/parallax3.jpg", "./assets/parallax4.jpg", "./assets/parallax5.jpg", "./assets/parallax6.jpg"];
+    this.backgroundImage = "./assets/parallax/parallax1.jpg";
+    this.backgroundImages = ["./assets/parallax/parallax1.jpg", "./assets/parallax/parallax2.jpg", "./assets/parallax/parallax3.jpg", "./assets/parallax/parallax4.jpg", "./assets/parallax/parallax5.jpg", "./assets/parallax/parallax6.jpg"];
     const interval = setInterval(() => {
 
       if (this.compteur == 15000) {

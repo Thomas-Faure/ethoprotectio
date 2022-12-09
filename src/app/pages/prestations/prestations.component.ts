@@ -20,8 +20,8 @@ export class PrestationsComponent implements OnInit {
     this.compteur = 15000;
     this.apparition = true;
     this.imageOpacity = 1;
-    this.backgroundImage = "./assets/effarouchements/piege.jpg";
-    this.backgroundImages = ["./assets/effarouchements/piege.jpg", "./assets/effarouchements/tir.jpg"];
+    this.backgroundImage = "./assets/effarouchements/img1.jpg";
+    this.backgroundImages = ["./assets/effarouchements/img1.jpg", "./assets/effarouchements/img2.jpg","./assets/effarouchements/img3.jpg","./assets/effarouchements/img4.jpg","./assets/effarouchements/img5.jpg","./assets/effarouchements/img6.jpg","./assets/effarouchements/img7.jpg","./assets/effarouchements/img8.jpg"];
     const interval = setInterval(() => {
 
       if (this.compteur == 15000) {
