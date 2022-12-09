@@ -455,7 +455,7 @@ Accueil
 
 .contact-fond{
     /* The image used */
-    background-image: url("./assets/parallax1.jpg");
+    background-image: url("./assets/parallax/parallax1.jpg");
 
     /* Set a specific height */
     min-height: 500px;
