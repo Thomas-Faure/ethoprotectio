@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "ci": "npm build  --omit=dev",
+    "ci": "npm install --production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start": "node server.js",
