@@ -14,11 +14,13 @@ export class PrestationsComponent implements OnInit {
   backgroundImages: any;
   backgroundImage!: string;
   compteur!: number;
+  index!: number;
   apparition!: boolean
   imageOpacity!: number;
   ngOnInit(): void {
     this.compteur = 15000;
     this.apparition = true;
+    this.index = 0;
     this.imageOpacity = 1;
     this.backgroundImage = "./assets/effarouchements/img1.jpg";
     this.backgroundImages = ["./assets/effarouchements/img1.jpg", "./assets/effarouchements/img2.jpg","./assets/effarouchements/img3.jpg","./assets/effarouchements/img4.jpg","./assets/effarouchements/img5.jpg","./assets/effarouchements/img6.jpg","./assets/effarouchements/img7.jpg","./assets/effarouchements/img8.jpg"];
@@ -27,8 +29,10 @@ export class PrestationsComponent implements OnInit {
       if (this.compteur == 15000) {
         if (this.apparition) {
           this.imageOpacity = 0;
-          var choixImage = this.backgroundImages.filter((x: string) => x != this.backgroundImage);
-          this.backgroundImage = choixImage[Math.floor(Math.random() * (choixImage.length - 1))]
+          if( this.index == this.backgroundImages.length)
+            this.index = 0;
+          this.backgroundImage = this.backgroundImages[ this.index];
+          this.index++;
         }
       }
       this.compteur -= 100;

@@ -1,9 +1,21 @@
 //Install express server
 const fs = require('fs');
 const express = require('express');
+const bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const path = require('path');
 const http = require('http');
 const https = require('https');
+
+
+const mailjet = require ('node-mailjet').apiConnect(
+	'cab0ec7bcf40c7758f9d8324c267444f', '9c3b1b9f7308d1cf3228c909a0925dc2',
+	{
+	  config: {},
+	  options: {}
+	} 
+  );
 
 const app = express();
 // Certificate
@@ -29,8 +41,42 @@ const app = express();
 app.use(express.static('./dist/Ethoprotectio'));
 
 
+app.post('/sendmail',jsonParser, (req, res) => {
+	console.log(req.body)
+	res.send('Hello World!')
+	const request = mailjet
+  .post("send", {'version': 'v3.1'})
+  .request({
+	"Messages":[
+	  {
+		"From": {
+		  "Email": "contat@ethoprotectio.fr",
+		  "Name": "from"
+		},
+		"To": [
+		  {
+			"Email": "contat@ethoprotectio.fr",
+			"Name": "to"
+		  }
+		],
+		"Subject": "Formulaire contact",
+		"HTMLPart": req.body.body,
+	  }
+	]
+  })
+  request
+	.then((result) => {
+	  console.log(result.body)
+	})
+	.catch((err) => {
+	  console.log(err.statusCode)
+	})
+  })
+
+
+  
 app.get('/*', (req, res) =>
-	res.sendFile('index.html', { root: 'dist/Ethoprotectio/' }),
+res.sendFile('index.html', { root: 'dist/Ethoprotectio/' }),
 );
 
 // Starting both http & https servers

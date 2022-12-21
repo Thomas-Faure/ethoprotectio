@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastService } from '../../services/toast-service';
+import axios, {isCancel, AxiosError} from 'axios';
 
 @Component({
   selector: 'app-contact',
@@ -24,12 +25,26 @@ export class ContactComponent implements OnInit {
 
   }
 
+  showSuccess() {
+    this.toastService.show('Votre mail a été envoyé', { classname: 'bg-success text-light', delay: 10000 });
+  }
+
   save(): void {
     this.submitted = true;
     if (this.jobForm.status == "VALID") {
-      let msg: string = "Nom et Prénom : " + encodeURIComponent(this.jobForm.value.firstName!) + "%0AOrganisme : " +
-        encodeURIComponent(this.jobForm.value.organisme!) + "%0ANumero Téléphone : " + (this.jobForm.value.phone == null ? "non renseigné" : encodeURIComponent(this.jobForm.value.phone!)) + "%0AMail : " + encodeURIComponent(this.jobForm.value.email!) + "%0AMessage : " + encodeURIComponent(this.jobForm.value.message == null ? '' : this.jobForm.value.message!);
-        window.location.href = "mailto:" + 'contact@ethoprotectio.fr?subject=Client&body=' + msg;
+
+      let msg: string = "Nom et Prénom : " +this.jobForm.value.firstName! + "<br>Organisme : " +
+        this.jobForm.value.organisme! + "<br>Numero Téléphone : " + (this.jobForm.value.phone == null ? "non renseigné" : this.jobForm.value.phone!) + "<br>Mail : " + this.jobForm.value.email! + "<br>Message : " + (this.jobForm.value.message == null ? '' : this.jobForm.value.message!);
+        axios({
+          method: 'post',
+          url: 'https://www.ethoprotectio.fr/sendmail',
+          data: {
+            body: msg
+          }
+        });
+        this.showSuccess();
+        this.jobForm.reset();
+        // window.location.href = "mailto:" + 'contact@ethoprotectio.fr?subject=Client&body=' + msg;*/
     }
   }
 

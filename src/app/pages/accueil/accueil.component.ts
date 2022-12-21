@@ -17,10 +17,13 @@ export class AccueilComponent implements OnInit {
   compteur!: number;
   apparition!: boolean
   imageOpacity!: number;
+  index!: number;
   ngOnInit(): void {
+
     this.compteur = 15000;
     this.apparition = true;
     this.imageOpacity = 1;
+    this.index = 0;
     this.backgroundImage = "./assets/parallax/parallax1.jpg";
     this.backgroundImages = ["./assets/parallax/parallax1.jpg", "./assets/parallax/parallax2.jpg", "./assets/parallax/parallax3.jpg", "./assets/parallax/parallax4.jpg", "./assets/parallax/parallax5.jpg", "./assets/parallax/parallax6.jpg"];
     const interval = setInterval(() => {
@@ -28,8 +31,10 @@ export class AccueilComponent implements OnInit {
       if (this.compteur == 15000) {
         if (this.apparition) {
           this.imageOpacity = 0;
-          var choixImage = this.backgroundImages.filter((x: string) => x != this.backgroundImage);
-          this.backgroundImage = choixImage[Math.floor(Math.random() * (choixImage.length - 1))]
+          if( this.index == this.backgroundImages.length)
+            this.index = 0;
+          this.backgroundImage = this.backgroundImages[ this.index];
+          this.index++;
         }
       }
       this.compteur -= 100;
