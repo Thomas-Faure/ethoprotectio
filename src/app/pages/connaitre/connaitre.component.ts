@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit, Component,AfterViewInit } from '@angular/core';
+import { Router,NavigationEnd,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-connaitre',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnaitreComponent implements OnInit {
 
-  constructor() { }
+  fragment !: string;
+  constructor(private route: ActivatedRoute) { }
+  public myEncodeURIComponent(text: string): string {
+    return encodeURI(text);
+  }
 
   ngOnInit(): void {
+    this.fragment = "";
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment!; });
+
+  }
+
+  ngAfterViewInit(): void {
+
+  }
+  ngAfterViewChecked(): void {
+    try {
+        if(this.fragment) {
+        
+        }
+    } catch (e) { }
   }
 
 }

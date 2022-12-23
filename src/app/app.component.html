@@ -20,11 +20,11 @@
               >Prestations</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-bar-menu-text"  type="button" [ngClass]="{'title_underline': getCurrentRoute('/connaitre')}" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle nav-bar-menu-text" type="button" [ngClass]="{'title_underline': getCurrentRoute('/connaitre')}" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Nous connaitre
             </a>
             <ul class="dropdown-menu  nav-bar-menu-text " aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']" fragment="quijesuis" (click)="isMenuCollapsed = !isMenuCollapsed">Qui suis-je ?</a></li>
+              <li><a class="dropdown-item nav-bar-menu-text" (click)="isMenuCollapsed = !isMenuCollapsed;forceNavigate('quijesuis')">Qui suis-je ?</a></li>
               <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']" fragment="ethoprotectio" (click)="isMenuCollapsed = !isMenuCollapsed">EthoProtectio</a></li>
               <li><a class="dropdown-item nav-bar-menu-text" [routerLink]="['/connaitre']" fragment="ethologie" (click)="isMenuCollapsed = !isMenuCollapsed" >L'éthologie</a></li>
             </ul>
@@ -51,8 +51,8 @@
     </div>
     <div class="col-sm-4" style="text-align:center">
       <div class="d-flex align-items-center" style="height:100%;">
-        <div style="width:100%">
-      <p class="footer-titres">UN PROBLEME, UN PROJET ?</p>
+      <div style="width:100%">
+      <p class="footer-titres">UN BESOIN, UN PROJET ?</p>
       <hr class="accueil-hr">
 
       <button type="submit" class="btn-contact bouton-footer" [routerLink]="['/contact']">CONTACTEZ-NOUS</button>
@@ -85,16 +85,16 @@
        </div>
     </div>
     <div class="col-sm-4" style="text-align:center">
-      <div class=" d-flex align-items-center justify-content-center" style="height:100%">
-      <p class="text-footer">Projet soutenu par Altitude 34<br>
-        avec un contrat d’appui pour la<br>
-        création d’entreprise jusqu’au
-        03/11/2023 :<br><br>
-        Adresse : BGE Sud-Ouest,<br><br> 3 chemin du Pigeonnier de la Cépière,<br> Bât C <br><br> 31100 TOULOUSE
-      <br><br>Tél : +33 (0)637067201
-      <br><br>E-mail : <a href="mailto:contact@ethoprotectio.fr">contact@ethoprotectio.fr</a></p>
+      <div class="d-flex align-items-center" style="height:100%;">
+      <div style="width:100%">
+      <p class="footer-titres-droite">Téléphone :<br> +33 (0)637067201<br>
+        E-Mail :<br> contact@ethoprotectio.fr</p>
+
+      
       </div>
+       </div>
     </div>
+
     <p class="text-footer">©EthoProtectio, Tous droits réservés – <a [routerLink]="['/mentions']">Mentions Légales</a></p>
   </div>
 </div>

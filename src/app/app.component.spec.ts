@@ -1,4 +1,5 @@
 import { AppComponent } from './app.component';
+import { encodeURIComponent } from 'https';
 import {ngStyle}
 describe('AppComponent', () => {
   beforeEach(async () => {
